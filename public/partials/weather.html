@@ -1,0 +1,67 @@
+<nav class="grey darken-4">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center"><img src="img/logo-1.png" class="responsive-img logo" alt="Tap!"></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li>
+                <a href="sass.html"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+    </div>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="images/office.jpg">
+                </div>
+                <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+                <a href="#name"><span class="white-text name">John Doe</span></a>
+                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+</nav>
+
+
+<div class="row">
+    <div class="col s12  weather-painel">
+        <h4> Previsão do Tempo</h4>
+        <div class="row">
+            <div class="col s12">
+                <h3>{{tempo.results.temp}}º</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="col s6 text-left">
+                <h4>{{tempo.results.city_name}}</h4>
+                <h3 class="">{{tempo.results.description}}</h3>
+                <h6>Umidade atual : {{tempo.results.humidity}}%</h6>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row">
+    <div class="col s12">
+        <h5 class="text-center">Previsão do Tempo para os proximos dias:</h5>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row weather-info">
+    <div class="col s3 " ng-repeat="previcoes in tempo.results.forecast">
+        <p class="text-right">{{previcoes.min}}º</p>
+        <i class="fas fa-cloud"></i>
+        <p class="">{{previcoes.weekday}} <br> {{previcoes.date}}</p>
+        <h6>{{previcoes.description}}</h6>
+    </div>
+</div>

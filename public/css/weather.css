@@ -1,0 +1,22 @@
+.weather-painel{
+    margin-top: 3rem;
+    text-align: center;
+}
+.col.s6 .fa-cloud-sun{
+    font-size: 200px;
+    
+}
+.fa-cloud{
+    font-size: 100px;
+    color:lightblue;
+}
+.text-left{
+    text-align:left;
+}
+.text-center{
+    text-align:center;
+}
+.row.weather-info{
+    margin-top: 2rem;
+    padding: 3rem;
+}

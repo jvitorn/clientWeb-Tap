@@ -4,7 +4,7 @@
 background-color: #08AEEA;
 
 ## Register
-<!-- Checkbox de termos. -->
+
 					<div class="form-group">
 						<label class="form-checkbox form-inline">
 							<input type="checkbox" id="checkTerm">
