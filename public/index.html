@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="tapapp">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tap</title>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- home  css -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3732f07a5a.js" crossorigin="anonymous"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- angular -->
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="js/lib/angular-resource.min.js"></script>
+    <!-- mask angular -->
+    <script src="js/lib/mask.min.js"></script>
+    <!-- diretivas -->
+    <script src="js/main.js"></script>
+    <!-- controllers -->
+    <script src="js/controllers/testeController.js"></script>
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/registerController.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Views -->
+        <ng-view></ng-view>
+    </div>
+</body>
+
+</html>

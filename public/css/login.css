@@ -1,0 +1,20 @@
+:root{
+    --cor-logo: #08AEEA;
+}
+.logo{
+    max-width: 40%!important;
+}
+.Login-container{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    text-align: center;
+    background-color: black;
+    color:white
+}
+.validate{
+    color: blanchedalmond;
+}
+.button-login{
+    margin-top: 2rem;
+}
