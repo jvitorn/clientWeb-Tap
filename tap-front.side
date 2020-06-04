@@ -1,0 +1,132 @@
+{
+  "id": "b9c63874-a60b-4d69-b2ed-7e268534d636",
+  "version": "2.0",
+  "name": "tap-front",
+  "url": "http://localhost:3000/login",
+  "tests": [{
+    "id": "172dfcbe-9b97-49e3-8ecd-43954ebbc54c",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "3b487718-d2df-44cc-b65e-49a6bbac3bd2",
+    "name": "Login",
+    "commands": [{
+      "id": "e4a41d84-24c0-450b-9f5d-67d457d45b73",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21a564d4-1f5a-4b3c-b496-b30679dabc49",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "755x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b08792e-ac8c-4e23-a9c1-90d2f98962b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .input-field > label",
+      "targets": [
+        ["css=.row:nth-child(1) > .input-field > label", "css:finder"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2341ce0-7ea9-4b1a-91fe-ed6c345a5072",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-field > .ng-valid-email",
+      "targets": [
+        ["css=.input-field > .ng-valid-email", "css:finder"],
+        ["xpath=//input[@type='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "955c8b06-a96f-43ba-b86a-3ae755d3c59d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .input-field",
+      "targets": [
+        ["css=.row:nth-child(1) > .input-field", "css:finder"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "268bb752-0ea4-4c72-951b-6dd69874223b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-touched",
+      "targets": [
+        ["css=.ng-touched", "css:finder"],
+        ["xpath=//input[@type='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "477be1cb-43be-4597-a2ef-fe01a7c1d995",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-touched",
+      "targets": [
+        ["css=.ng-touched", "css:finder"],
+        ["xpath=//input[@type='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jdc_santos@outlook.com"
+    }, {
+      "id": "4bed5d1e-c9b5-4d08-bb26-39fe0d13d1c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-pristine",
+      "targets": [
+        ["css=.ng-pristine", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5dab17d-4267-4d67-907c-018f79eddf92",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,31.25)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "456a750b-380e-4d67-bce0-6a534ac84374",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ng-untouched",
+      "targets": [
+        ["css=.ng-untouched", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "9813bc21-3de5-48cc-93db-196acbb57fd9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fas",
+      "targets": [
+        ["css=.fas", "css:finder"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "052a77fd-a509-4450-8598-db39b51e57d7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["172dfcbe-9b97-49e3-8ecd-43954ebbc54c"]
+  }],
+  "urls": ["http://localhost:3000/login"],
+  "plugins": []
+}
