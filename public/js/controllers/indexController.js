@@ -1,11 +1,14 @@
 angular.module('tapapp').controller('IndexController', function ($scope, $http) {
 
     function fabricarModulo(parametro) {
-        let objeto = {};
+        let objeto = {
+            modulos: [
+                { nome: 'esporte', status: parametro },
+                { nome: 'saude', status: parametro },
+                { nome: 'tempo', status: parametro },
+            ]
+        }
 
-        objeto.esporte = parametro;
-        objeto.saude = parametro;
-        objeto.tempo = parametro;
 
         return objeto
     }
@@ -13,12 +16,17 @@ angular.module('tapapp').controller('IndexController', function ($scope, $http) 
     $scope.modulos = fabricarModulo(false);
 
     $scope.ativar = (modulo) => {
+
         let ativo = modulo
-        $scope.modulos[ativo] = true;
+        $scope.modulos.modulos[ativo] = true;
 
 
     }
 
+    $scope.novoModulo = (nome, status) => {
+        $scope.modulos[nome] = status;
 
-
+        console.log($scope.modulos)
+    }
+    console.log($scope.modulos.modulos)
 });

@@ -43,11 +43,14 @@
                         ng-click="ativar('saude');ativar('tempo');ativar('esporte');">
                         <i class="fas fa-eye"></i>
                     </button>
+                    <button class="waves-effect waves-light btn pulse" ng-click="novoModulo('futebol',true)">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </h3>
                 <div class="row">
-                    <div class="col s12 z-depth-3" ng-if="modulos.saude">
+                    <div class="col s12 z-depth-3" ng-if="modulos" ng-repeat='modulo in modulos.modulos'>
                         <h4>
-                            Saude
+                            {{modulo.nome}}
                             <button class="waves-effect waves-light btn pulse">
                                 <i class="fas fa-sign-out-alt"></i>
                             </button>
