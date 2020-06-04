@@ -7,7 +7,7 @@ angular.module('tapapp', ['ngRoute', 'ui.mask'])
             //pagina que sera carregada
             templateUrl: 'partials/home.html',
             //controller da pagina 
-            controller: 'TesteController'
+            controller: 'IndexController'
         });
         $routeProvider.when('/login', {
             //pagina que sera carregada

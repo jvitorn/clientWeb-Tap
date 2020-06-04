@@ -1,0 +1,14 @@
+.home-painel{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.s12.home-painel h4 i.fa-home{
+    font-size: 200px;
+    color:lightseagreen;
+}
+
+.checkbox-home{
+    margin: 3rem;
+    padding: 3rem;
+}
