@@ -32,7 +32,13 @@ angular.module('tapapp', ['ngRoute', 'ui.mask'])
             templateUrl: 'partials/weather.html',
             //controller da pagina 
             controller: 'WeatherController'
-        })
+        });
+        $routeProvider.when('/fogot', {
+            //pagina que sera carregada
+            templateUrl: 'partials/confirmation.html',
+            //controller da pagina 
+            controller: 'FogotCodeController'
+        });
         //obrigando o usuario a ser redirecionado para '/'
         $routeProvider.otherwise({ redirectTo: '/home' });
     });

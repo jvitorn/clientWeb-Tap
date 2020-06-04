@@ -1,0 +1,40 @@
+<div class="row">
+    <section class="col s8 offset-s2">
+        <div class="section Login-container z-depth-2">
+            <div class="row">
+                <div class="col s12">
+                    <img src="img/logo-1.png" class="responsive-img logo" alt="Tap!">
+                </div>
+            </div>
+            <h5>Confirmação</h5>
+            <p>Legal, você nos pediu o código, agora cheque seu e-mail e insira o código que te mandamos no campo a
+                <b>seguir.</b></p>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="email" class="validate" ng-model="usuario.email" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" class="validate" ng-model="usuario.auth" required>
+                            <label for="password">Codigo</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 button-login">
+                            <button class="btn waves-effect waves-light btn-large light-blue lighten-2"
+                                ng-click="enviar(usuario)">
+                                Enviar
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
