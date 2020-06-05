@@ -51,8 +51,8 @@
 <div class="row">
     <div class="col s12">
         <div class="row">
-            <div class="col s3 task-item" ng-repeat="tarefa in tarefas track by $index">
-                <h4>{{tarefa.name}} <i class="fas fa-times"></i></h4>
+            <div class="col l3 m12 task-item" ng-repeat="tarefa in tarefas track by $index">
+                <h4>{{tarefa.name}} <i class="fas fa-times" ng-click="excluirTarefa($index)"></i></h4>
                 <p>{{tarefa.description}}</p>
             </div>
             <div class="col s3 task-item">
@@ -71,7 +71,7 @@
         <h4>Nova Tarefa</h4>
 
         <div class="row">
-            <div class="input-field col s4  task-create">
+            <div class="input-field col s6 task-create">
                 <input type="text" class="validate" ng-model="task.name">
                 <label> Nome da tarefa</label>
                 <p>Adicione um titulo para essa tarefa</p>

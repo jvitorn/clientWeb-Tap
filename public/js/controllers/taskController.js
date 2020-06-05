@@ -16,4 +16,16 @@ angular.module('tapapp').controller('TaskController', function ($scope, $http, $
         $scope.tarefas = tasks;
 
     }
+    $scope.excluirTarefa = (posicao) => {
+
+        tasks.splice(posicao, 1);
+
+
+        localStorage.setItem('Tasks', JSON.stringify(tasks));
+
+        $scope.tarefas = JSON.parse(localStorage.getItem('Tasks')) || [];
+
+
+
+    }
 });
