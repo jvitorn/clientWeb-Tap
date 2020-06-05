@@ -1,10 +1,13 @@
-angular.module('tapapp').controller('RegisterController', function ($scope, $http) {
+angular.module('tapapp').controller('RegisterController', function ($scope, $http, $location) {
     console.log('entrou no controller register');
     $scope.enviar = (usuario) => {
         console.log(usuario)
         $http.post('http://jdc.profrodolfo.com.br/backend/user', usuario)
             .then(results => {
-                console.log(results.data)
+                if (results.data.status == 'success') {
+                    Swal.fire('Favor Verifique seu Email!');
+                    $location.path('/fogot')
+                }
             })
             .catch(error => console.log(error))
     }

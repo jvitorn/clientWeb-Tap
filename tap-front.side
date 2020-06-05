@@ -2,7 +2,7 @@
   "id": "b9c63874-a60b-4d69-b2ed-7e268534d636",
   "version": "2.0",
   "name": "tap-front",
-  "url": "http://localhost:3000/login",
+  "url": "http://localhost:3000/task",
   "tests": [{
     "id": "172dfcbe-9b97-49e3-8ecd-43954ebbc54c",
     "name": "Untitled",
@@ -118,6 +118,264 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "26a8cd45-ae67-4930-9550-040e596dd53a",
+    "name": "Criar Tarefas",
+    "commands": [{
+      "id": "1ea87e84-202b-4ae0-9a29-308d6828396c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/task",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37667606-b81e-4bea-a39e-bcda70bd51aa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "755x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ab06eb0-3fa0-4eb5-8de1-a5278c317d8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1d92e13-4158-4c32-af33-db36804d08fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.validate",
+      "targets": [
+        ["css=.validate", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='demoModal']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a92b8d4-5f32-44e7-a021-ebdb543a686f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.validate",
+      "targets": [
+        ["css=.validate", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='demoModal']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Comprar Alface"
+    }, {
+      "id": "1e92c7ff-1db4-48de-8d39-a27c956d16d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s6 > label",
+      "targets": [
+        ["css=.s6 > label", "css:finder"],
+        ["xpath=//div[@id='demoModal']/div/div[2]/div/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Descriçaõ da tarefa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffe025db-b8c7-4dc8-a22d-4ea93865e4e7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b28223eb-200c-4487-b2ab-e44a70291086",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.input-field > .waves-effect",
+      "targets": [
+        ["css=.input-field > .waves-effect", "css:finder"],
+        ["xpath=//div[@id='demoModal']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37dbef7a-20e6-48d2-852b-dc12e96f2359",
+      "comment": "",
+      "command": "type",
+      "target": "id=textarea1",
+      "targets": [
+        ["id=textarea1", "id"],
+        ["css=#textarea1", "css:finder"],
+        ["xpath=//textarea[@id='textarea1']", "xpath:attributes"],
+        ["xpath=//div[@id='demoModal']/div/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "fui ao mercado comprar alface e a formiguinha subiu na minha laje "
+    }, {
+      "id": "03fdbc63-6f5d-4b0c-b333-4a43c4ff10ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-field > .waves-effect",
+      "targets": [
+        ["css=.input-field > .waves-effect", "css:finder"],
+        ["xpath=//div[@id='demoModal']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9944439-908e-424e-93b6-9225467f3297",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.input-field > .waves-effect",
+      "targets": [
+        ["css=.input-field > .waves-effect", "css:finder"],
+        ["xpath=//div[@id='demoModal']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d40c33dc-05da-4d3a-aa16-e862c1871a19",
+      "comment": "",
+      "command": "click",
+      "target": "id=materialize-modal-overlay-1",
+      "targets": [
+        ["id=materialize-modal-overlay-1", "id"],
+        ["css=#materialize-modal-overlay-1", "css:finder"],
+        ["xpath=//div[@id='materialize-modal-overlay-1']", "xpath:attributes"],
+        ["xpath=//body/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4420e134-e419-4915-bf94-5f52ffe1e5e2",
+    "name": "Criar Tarefas (1)",
+    "commands": [{
+      "id": "3d76fcf3-0b2d-40e1-abd5-929406e40006",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/task",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0df6a21e-db2b-4934-82ae-a36702a5dae1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "755x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "766056ca-91c7-4630-a903-2b5ba8c26438",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee5ddbcf-e77d-485e-8d8a-c730712e1c7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.validate",
+      "targets": [
+        ["css=.validate", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='demoModal']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36b980af-9017-4a5a-b79d-adeaa9121e9c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.validate",
+      "targets": [
+        ["css=.validate", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='demoModal']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tomate"
+    }, {
+      "id": "a6d3dfdb-f5e2-4b0b-863e-c6cfef3ba405",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s6 > label",
+      "targets": [
+        ["css=.s6 > label", "css:finder"],
+        ["xpath=//div[@id='demoModal']/div/div[2]/div/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Descriçaõ da tarefa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9c3fcaf-67cc-4726-b4da-91f6d4eb0b95",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc5a9c25-e182-47c1-a088-4c621ab2d679",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.input-field > .waves-effect",
+      "targets": [
+        ["css=.input-field > .waves-effect", "css:finder"],
+        ["xpath=//div[@id='demoModal']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc90b367-a1bc-4a6c-9a55-60ca8662c2b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=textarea1",
+      "targets": [
+        ["id=textarea1", "id"],
+        ["css=#textarea1", "css:finder"],
+        ["xpath=//textarea[@id='textarea1']", "xpath:attributes"],
+        ["xpath=//div[@id='demoModal']/div/div[2]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "nao fui ao mercado comprar Tomate e a formiguinha subiu na minha laje "
+    }, {
+      "id": "43fe3589-103a-4540-b26e-a939e410abf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-field > .waves-effect",
+      "targets": [
+        ["css=.input-field > .waves-effect", "css:finder"],
+        ["xpath=//div[@id='demoModal']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d52cef87-2874-411f-bd2e-6ccdeb1057fe",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.input-field > .waves-effect",
+      "targets": [
+        ["css=.input-field > .waves-effect", "css:finder"],
+        ["xpath=//div[@id='demoModal']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49c37959-d6c9-4ff6-b7f2-45a45b7ee3b0",
+      "comment": "",
+      "command": "click",
+      "target": "id=materialize-modal-overlay-1",
+      "targets": [
+        ["id=materialize-modal-overlay-1", "id"],
+        ["css=#materialize-modal-overlay-1", "css:finder"],
+        ["xpath=//div[@id='materialize-modal-overlay-1']", "xpath:attributes"],
+        ["xpath=//body/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "052a77fd-a509-4450-8598-db39b51e57d7",
@@ -127,6 +385,6 @@
     "timeout": 300,
     "tests": ["172dfcbe-9b97-49e3-8ecd-43954ebbc54c"]
   }],
-  "urls": ["http://localhost:3000/login"],
+  "urls": ["http://localhost:3000/login", "http://localhost:3000/task"],
   "plugins": []
 }

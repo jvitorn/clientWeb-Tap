@@ -1,0 +1,16 @@
+.task-item{
+    background-color: #eeff41 ;
+    color:black;
+    padding: 2rem;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    border:1px solid darkslategrey ;
+}
+.task-item .fa-times{
+    color: darkred;
+}
+.task-create  input[type=text].validate{
+    color: red;
+}
