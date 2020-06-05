@@ -45,13 +45,53 @@
     <script src="js/controllers/weatherController.js"></script>
     <script src="js/controllers/fogotCodeController.js"></script>
     <script src="js/controllers/taskController.js"></script>
+    <script src="js/controllers/rootController.js"></script>
+    <script src="js/controllers/mainController.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Views -->
-        <ng-view></ng-view>
-    </div>
+    <header>
+        <div class="navbar-fixed">
+            <nav class=" navbar grey darken-4">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo center">Logo</a>
+                    <a href="#" class="sidenav-trigger" data-activates="sidenav-left" data-sidenav="left"
+                        data-menuwidth="300" data-closeonclick="false"><i class="fas fa-bars"></i></a>
+                    <ul class="left hide-on-med-and-down">
+
+                        <li><a><i class="fas fa-bars"></i> Options</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul id="sidenav-left" class="sidenav ">
+                <li>
+                    <div class="user-view">
+                        <div class="background" style="background-color: aqua;">
+
+                        </div>
+                        <a href="#user"><img class="responsive-img" src="img/logo-1.png"></a>
+                        <a href="#name"><span class="white-text name">John Doe</span></a>
+                        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                    </div>
+                </li>
+                <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                <li><a href="#!">Second Link</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a class="subheader">Subheader</a></li>
+                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+
+            </ul>
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <!-- Views -->
+            <ng-view></ng-view>
+        </div>
+    </main>
 </body>
 
 </html>
