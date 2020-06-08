@@ -13,12 +13,20 @@ angular.module('tapapp').controller('CalendarController', function ($scope, $htt
 
 
 
+    // dias 
+    $scope.dateDay = {}
 
     const getDaysInMonth = (month, year) => {
         return new Date(year, month, 0).getDate();
     };
-    console.log(getDaysInMonth(1, 2020));
-    console.log(getDaysInMonth(2, 2020));
-    console.log(getDaysInMonth(6, 2020));
-    console.log(getDaysInMonth(12, 2020));
+
+
+    const diasDoMes = getDaysInMonth(d.getMonth(), d.getFullYear());
+
+    for (let contador = 1; contador <= diasDoMes; contador++) {
+        $scope.dateDay[contador] = contador
+
+    }
+
+
 });

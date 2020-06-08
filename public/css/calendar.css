@@ -1,15 +1,53 @@
+.text-right{
+    text-align: right!important;
+}
+.col.s6>.row>.col.s12>h4.text-right{
+    color:#C7BEBE;
+}
 .painel-calendar{
     margin-top: 5rem;
-    padding: 2rem;
+    padding: 2rem!important;
     border-radius: 10px;
+    border: 1px solid gray;
+    
+}
+.Info-calendar{
+    background-color: lightseagreen;
+    color:white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 2rem!important;
+    border-bottom: 3rem!important;
+}
+
+.Info-calendar input[type=text].validate{
+    color:white!important;
+} 
+.Info-calendar .input-field .helper-text{
+    color:white!important;
+} 
+.month-calendar{
+    font-size: 10px;
+    color:red;
 }
 .week{
-    
+    margin-top: -3rem!important;
+    margin-bottom: 2rem!important;
 }
 .week-calendar{
-    color: lightseagreen;
+    color: lightgray;
     padding: 1rem!important;
-    margin-left: 1rem!important;
+    margin-left: 17px!important;
     font-size: 20px;
     
+}
+.day-calendar{ 
+    margin-top: -4rem!important;
+    margin-bottom: 3rem!important;
+    margin-left: 1.25rem!important;
+    font-size: 20px;
+}
+.day-calendar:hover{
+    color:lightseagreen;
+   cursor: pointer;
 }
