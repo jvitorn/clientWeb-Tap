@@ -51,6 +51,12 @@ angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize'])
             //controller da pagina 
             controller: 'TaskController'
         });
+        $routeProvider.when('/calendar', {
+            //pagina que sera carregada
+            templateUrl: 'partials/calendar.html',
+            //controller da pagina 
+            controller: 'CalendarController'
+        });
         //obrigando o usuario a ser redirecionado para '/'
         $routeProvider.otherwise({ redirectTo: '/home' });
     });
