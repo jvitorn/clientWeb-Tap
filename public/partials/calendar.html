@@ -23,14 +23,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="row">
-                    <div class="divider"></div>
-                    <h5>Feriados Do Mes</h5>
-                    <input type="text" ng-model="dateFilter">
-                    {{dateFilter | date: 'longDate'}}
-                    <p ng-repeat='feriados in dateApi'>{{feriados.date | date:'dd/MM'}} -
-                        {{feriados.name}}</p>
-                </div>
+
             </div>
             <div class="col s6 ">
                 <div class="row">
