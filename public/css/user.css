@@ -1,0 +1,52 @@
+.user-painel{
+    margin-top: 4rem;
+    padding: 4rem !important;
+    color: whitesmoke;
+    background-color: rgb(66, 22, 228); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(66, 22, 228) , rgb(22, 197, 228) ); 
+   border-radius: 5px;
+   align-content: space-between;
+   align-items: center;
+   touch-action: auto;
+   text-align: center;
+}
+.user-painel img.responsive-img{
+    padding: 0.5rem;
+    border-radius: 25px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    width:130px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.user-painel img.responsive-img:hover {
+    box-shadow: 0 0 2px 1px rgba(152, 36, 175, 0.5);
+    opacity: 0.7;
+}
+.user-painel h5{
+    margin-bottom: 1rem;
+}
+.user-painel-info{
+    margin-top: 2rem;
+    margin-bottom: 4rem!important;
+}
+.user-painel-info .card.horizontal .fa-edit{
+
+    padding: 2rem;
+    align-items: center;
+    color:rgb(66, 22, 228);
+    font-size: 100px;
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color:  rgb(22, 197, 228);
+}
+.tabs .indicator {
+    background-color: rgb(22, 197, 228);
+}
+.tabs .tab a {
+    color: rgb(66, 22, 228);
+   
+}
