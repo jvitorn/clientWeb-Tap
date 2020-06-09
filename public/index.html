@@ -47,8 +47,8 @@
     <script src="js/controllers/fogotCodeController.js"></script>
     <script src="js/controllers/taskController.js"></script>
     <script src="js/controllers/rootController.js"></script>
-    <script src="js/controllers/mainController.js"></script>
     <script src="js/controllers/calendarController.js"></script>
+    <script src="js/controllers/userController.js"></script>
 </head>
 
 <body>
@@ -61,7 +61,8 @@
                         data-menuwidth="300" data-closeonclick="false"><i class="fas fa-bars"></i></a>
                     <ul class="left hide-on-med-and-down">
 
-                        <li><a><i class="fas fa-bars"></i> Options</a></li>
+                        <li><a href='javascript:void(0);' data-activates='demoDropdown' dropdown data-hover="true"><i
+                                    class="fas fa-bars"></i> Options</a></li>
                     </ul>
                 </div>
             </nav>
@@ -85,7 +86,14 @@
                 <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
 
             </ul>
-
+            <!-- Dropdown Structure -->
+            <ul id='demoDropdown' class='dropdown-content'>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/task">Tarefas</a></li>
+                <li><a href="/weather">Tempo</a></li>
+                <li><a href="/user">Config</a></li>
+                <li><a href="javascript:void(0);">Link 5</a></li>
+            </ul>
         </div>
     </header>
     <main>

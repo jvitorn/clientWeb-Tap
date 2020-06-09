@@ -27,12 +27,7 @@ angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize'])
             //controller da pagina 
             controller: 'RegisterController'
         });
-        $routeProvider.when('/main', {
-            //pagina que sera carregada
-            templateUrl: 'partials/main.html',
-            //controller da pagina 
-            controller: 'MainController'
-        });
+
         $routeProvider.when('/weather', {
             //pagina que sera carregada
             templateUrl: 'partials/weather.html',
@@ -56,6 +51,12 @@ angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize'])
             templateUrl: 'partials/calendar.html',
             //controller da pagina 
             controller: 'CalendarController'
+        });
+        $routeProvider.when('/user', {
+            //pagina que sera carregada
+            templateUrl: 'partials/user.html',
+            //controller da pagina 
+            controller: 'UserController'
         });
         //obrigando o usuario a ser redirecionado para '/'
         $routeProvider.otherwise({ redirectTo: '/home' });
