@@ -33,17 +33,14 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 
-    <script>
-        if (navigator.geolocation) {
-            console.log('o navegador suporta geolocalização')
-        }
-        else { x.innerHTML = "O seu navegador não suporta Geolocalização."; }
-
-    </script>
+    <script src="js/geolocalization.js"></script>
     <!-- mask angular -->
     <script src="js/lib/mask.min.js"></script>
     <!-- diretivas -->
     <script src="js/main.js"></script>
+    <!-- api map quest -->
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
 
     <!-- controllers -->
     <script src="js/controllers/testeController.js"></script>

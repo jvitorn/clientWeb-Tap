@@ -15,7 +15,7 @@
             <li class="tab col s3"><a class="active" href="#test1">Biografia</a></li>
             <li class="tab col s3"><a href="#test2">Modulos Instalados</a></li>
             <li class="tab col s3"><a href="#test3">Localização</a></li>
-            <li class="tab col s3"><a href="#test4">Contato Comercial</a></li>
+            <li class="tab col s3"><a href="#test4" ng-click="geo()">Contato Comercial</a></li>
         </ul>
     </div>
     <div id="test1" class="col s12 user-painel-info">
@@ -76,36 +76,29 @@
         </div>
 
     </div>
-    <div id="test3" class="col s12 user-painel-info">
+    <div id="test4" class="col s12 user-painel-info">
         <div class="col s12">
             <div class="card horizontal">
                 <div class="card-image">
-                    <i class="fas fa-edit"></i>
+                    <i class="fas fa-envelope-open-text"></i>
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                        <h4 class="header">Biografia </h4>
-                        <p>Solteiro, gato , amante por tecnologia e programação desde novinho e programador JS </p>
+                        <h4 class="header">Email Comercial</h4>
+                        <p>jvitorn.contato@gmail.com</p>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-    <div id="test4" class="col s12">
+    <div id="test3" class="col s12 user-painel-info">
         <div class="col s12">
             <div class="card horizontal">
-                <div class="card-image">
-                    <i class="fas fa-edit"></i>
-                </div>
+
                 <div class="card-stacked">
-                    <div class="card-content">
-                        <h4 class="header">Biografia </h4>
-                        <p>Solteiro, gato , amante por tecnologia e programação desde novinho e programador JS </p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">This is a link</a>
-                    </div>
+                    <h5 class="text-center">Localização</h5>
+                    <div id="map"></div>
                 </div>
             </div>
         </div>

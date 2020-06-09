@@ -1,3 +1,4 @@
-if (!('geolocation' in navigator)) {
-    alert("Navegador não tem suporte API Geolocation");
+if (navigator.geolocation) {
+    console.log('o navegador suporta geolocalização')
 }
+else { x.innerHTML = "O seu navegador não suporta Geolocalização."; }
