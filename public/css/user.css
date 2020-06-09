@@ -32,12 +32,21 @@
     margin-top: 2rem;
     margin-bottom: 4rem!important;
 }
-.user-painel-info .card.horizontal .fa-edit{
+.user-painel-info p{
+   text-align: justify;
+   font-style: oblique;
+   color:rgb(97, 97, 97);
+}
+.user-painel-info .card.horizontal .fas{
 
     padding: 2rem;
     align-items: center;
     color:rgb(66, 22, 228);
     font-size: 100px;
+    opacity: 0.5;
+}
+.user-painel-info .card-image{
+    border-right: 1px solid lightgray;
 }
 .tabs .tab a:hover, .tabs .tab a.active {
     background-color: transparent;

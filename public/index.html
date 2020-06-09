@@ -33,6 +33,13 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 
+    <script>
+        if (navigator.geolocation) {
+            console.log('o navegador suporta geolocalização')
+        }
+        else { x.innerHTML = "O seu navegador não suporta Geolocalização."; }
+
+    </script>
     <!-- mask angular -->
     <script src="js/lib/mask.min.js"></script>
     <!-- diretivas -->
