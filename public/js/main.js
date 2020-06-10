@@ -58,6 +58,12 @@ angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize'])
             //controller da pagina 
             controller: 'UserController'
         });
+        $routeProvider.when('/finance', {
+            //pagina que sera carregada
+            templateUrl: 'partials/finance.html',
+            //controller da pagina 
+            controller: 'FinanceController'
+        });
         //obrigando o usuario a ser redirecionado para '/'
         $routeProvider.otherwise({ redirectTo: '/home' });
     });

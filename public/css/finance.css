@@ -1,0 +1,84 @@
+.cotation-painel{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color:#313a46;
+    color:white;
+    padding: 4rem!important;
+    text-align: center;
+
+}
+span.name-cotation{
+    padding: 1rem;
+    font-variant: small-caps;
+    font-size: 15px;
+    text-align: justify;
+    text-justify: initial;
+    color:#e3eaef;
+}
+#cotation-dolar{
+    font-size: 20px;
+}
+#cotation-dolar .badge-cotations{
+    font-size: 15px;
+}
+#cotation-dolar .price{
+    font-size: 44px;
+    
+}
+span.name-cotation .price{
+    font-weight: 400!important;
+    text-align: justify;
+    margin-bottom: 4rem;
+    word-wrap: normal;
+    font-size: 24px;
+    color:white;
+}
+span.name-cotation .badge-cotations{
+    padding: 0.25rem;
+    border-radius: 5px;
+    color:white;
+    font-size: 12px;
+    margin: 3rem;
+}
+span.name-cotation .badge-cotations.red{
+    color:white;
+}
+span.name-cotation .badge-cotations.green{
+    color:white;
+}
+span.name-cotation .badge-cotations.color-red{
+    color:#fa5c7c;
+}
+span.name-cotation .badge-cotations.color-blue{
+    color:#0acf97;
+}
+span.name-cotation .price.color-red{
+    color:#fa5c7c;
+}
+span.name-cotation .price.color-blue{
+    color:#0acf97;
+}
+span.name-cotation .price.color-green{
+    color:#0acf97;
+}
+span.name-cotation .badge-cotations.color-green{
+    color:#0acf97;
+}
+.cotate-info{
+    margin-bottom: 0.75rem;
+}
+span.name-cotation .location{
+    text-align: justify;
+    margin-bottom: 4rem;
+    word-wrap: normal;
+    font-size: 10px;
+    color:white;
+}
+span.name-cotation .variation{
+    font-weight: 400!important;
+    text-align: justify;
+    margin-bottom: 4rem;
+    word-wrap: normal!important;
+    font-size: 30px;
+    color:white;
+}

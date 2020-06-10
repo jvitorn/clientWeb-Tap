@@ -1,109 +1,99 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/spectre-css/spectre.css">
-		<link rel="stylesheet" href="css/spectre-css/spectre-icons.css">
-		<link rel="stylesheet" href="css/task.css">
-		<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            <div class="columns">
-                <div class="column col-xs-12 col-xs-12 col-lg-12 col-xl-12 col-lg-12">
-                    <div class="columns">
-                        <div class="column col-xs-12" id="content-container">
-                            <div class="columns">
-                                <section class="column col-xs-11 col-mx-auto" id="div-1">
-                                    <div class="columns">
-                                        <div class="column col-xs-12 col-mx-auto">
-                                            <h3><a href="login.html">Tarefas de Hoje</a></h3>
-                                        </div>
-                                    </div>
-                                    <div class="columns">
-                                        <div class="column col-xs-11 col-mx-auto" id="teste">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="columns">
-                                        <div class="column col-xs-11 col-mx-auto" id="teste">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="columns">
-                                        <div class="column col-xs-11 col-mx-auto" id="teste">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="columns">
-                                        <div class="column col-xs-12 col-mx-auto" id="all-tasks">
-                                            <a href="#"><h6>Ver todas as tarefas -></h6></a>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="columns">
-                                <section class="column col-xs-11 col-mx-auto" id="div-2">
-
-                                </section>
-                            </div>
-                            <div class="columns">
-                                <section class="column col-xs-11 col-mx-auto" id="div-2">
-
-                                </section>
-                            </div>
-
-                            
-                            
-                            
-                        </div>
-                    </div>
-                    <div class="columns">
-                        <div class="column col-xs-12 col-mx-auto" id="button-area">
-                            <!-- <div class="columns">
-                                <div class="column col-xs-2 col-mx-auto">
-                                    <div id="main-button"></div>
-                                </div>
-                            </div> -->
-                            <div class="columns">
-                                <div class="column col-xs-3 button-item">
-                                    <div class="columns">
-                                        <div class="column col-xs-6 col-mx-auto">
-                                            <i class="fas fa-tasks"></i>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="column col-xs-3 button-item">
-                                    <div class="columns">
-                                        <div class="column col-xs-6 col-mx-auto">
-                                            <i class="fas fa-dollar-sign"></i>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="column col-xs-3 button-item">
-                                    <div class="columns">
-                                        <div class="column col-xs-6 col-mx-auto">
-                                            <i class="fas fa-heartbeat"></i>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="column col-xs-3 button-item">
-                                    <div class="columns">
-                                        <div class="column col-xs-6 col-mx-auto">
-                                            <i class="fas fa-user-cog"></i>
-                                        </div>
-                                    </div>
-                                    
-                                </div>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="row">
+    <div class="col s12 home-painel">
+        <h2><i class="fas fa-chart-line"></i> Finanças</h2>
+        <p>Aqui você pode ver a principal cotação atual de dados financeiros.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 cotation-painel">
+        <div class="row">
+            <div class="col s12">
+                <h5>Cotação do Dolar</h5>
             </div>
         </div>
-        <script src="https://kit.fontawesome.com/c619d4621f.js" crossorigin="anonymous"></script>
-    </body>
-</html>
+        <div class="row">
+            <div class="col s8 offset-s2">
+
+                <span class="name-cotation" id="cotation-dolar">
+                    <span ng-class="{'badge-cotations color-blue':isCotation(finances.results.currencies.USD.variation),
+                        'badge-cotations color-red':isCotation2(finances.results.currencies.USD.variation)}">
+                        <i class="fas fa-arrow-up" ng-if="isCotation(finances.results.currencies.USD.variation)"></i>
+                        <i class="fas fa-arrow-down" ng-if="isCotation2(finances.results.currencies.USD.variation)"></i>
+                        {{finances.results.currencies.USD.variation}}
+                        %</span>
+                    <br>
+                    <span
+                        ng-class="{'price color-green':isCotation(finances.results.currencies.USD.buy),
+                    'price color-red':isCotation2(finances.results.currencies.USD.buy)}">{{finances.results.currencies.USD.buy | currency:"R$ " }}</span>
+                    <br>
+                    {{finances.results.currencies.USD.name}}
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <h5>Cotação das principais Moedas do Brasil</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 cotate-info" ng-repeat=" cotations in finances.results.currencies">
+
+                <span class="name-cotation">
+                    <span ng-class="{'badge-cotations blue':isCotation(cotations.variation),
+                        'badge-cotations red':isCotation2(cotations.variation)}">{{cotations.variation}}
+                        %</span>
+                    <br>
+                    <span class="price">{{cotations.buy | currency:"R$ "}}</span>
+                    <br>
+                    {{cotations.name}}
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <h5>Indices de Bolsas de Valores Pelo Mundo</h5>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col s3" ng-repeat=" bolsas in finances.results.stocks">
+
+                <span class="name-cotation">
+                    <span class="variation" ng-class="{'badge-cotations color-green':isCotation(bolsas.variation),
+                        'badge-cotations color-red':isCotation2(bolsas.variation)}">
+
+                        {{bolsas.variation}}%
+                    </span>
+                    <br>
+                    {{bolsas.name}}
+                    <br>
+                    <span class="location">{{bolsas.location}}</span>
+                </span>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <h5>Cotação do BitCoin nas Principais Corretoras</h5>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col s4" ng-repeat=" bolsas in finances.results.bitcoin">
+
+                <span class="name-cotation">
+                    <span class="variation" ng-class="{'badge-cotations color-green':isCotation(bolsas.variation),
+                        'badge-cotations color-red':isCotation2(bolsas.variation)}"><i class="fas fa-arrow-up"
+                            ng-if="isCotation(bolsas.variation)"></i><i class="fas fa-arrow-down"
+                            ng-if="isCotation2(bolsas.variation)"></i>
+                        {{bolsas.variation}}%</span>
+                    <br>
+                    {{bolsas.name}}
+                    <br>
+                    <span class="location">{{bolsas.location}}</span>
+                </span>
+
+            </div>
+        </div>
+    </div>
+</div>
