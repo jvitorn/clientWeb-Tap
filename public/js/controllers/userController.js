@@ -3,6 +3,8 @@ angular.module('tapapp').controller('UserController', function ($scope, $http, $
         const latitude = position.coords.latitude
         const longitude = position.coords.longitude
 
+        console.log('latitude' + latitude);
+        console.log('longitude' + longitude);
         L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
 
         var map = L.mapquest.map('map', {
@@ -16,7 +18,7 @@ angular.module('tapapp').controller('UserController', function ($scope, $http, $
     $scope.geo = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
-
+            console.log('entrou na geolocalização')
         }
     }
 });
