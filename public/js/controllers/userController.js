@@ -1,10 +1,21 @@
 angular.module('tapapp').controller('UserController', function ($scope, $http, $location) {
+
+    function fabricarModulo(parametro) {
+        let objeto = [
+            { nome: 'Finanças', status: parametro, icon: 'fas fa-chart-line', description: 'Veja as ações da bolsa de valores, cotação das principais moedas do brasil e outros' },
+            { nome: 'Noticias', status: parametro, icon: 'fas fa-newspaper', description: 'confira as principais noticias do brasil em um click' },
+            { nome: 'Tarefas', status: parametro, icon: 'fas fa-list-ul', description: 'Veja as tarefas organizadas no seu dia a dia' },
+            { nome: 'Tempo', status: parametro, icon: 'fas fa-stopwatch', description: 'Confira a previsão do tempo local' },
+        ]
+        return objeto
+    }
+
     function showPosition(position) {
         const latitude = position.coords.latitude
         const longitude = position.coords.longitude
 
-        console.log('latitude' + latitude);
-        console.log('longitude' + longitude);
+
+
         L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
 
         var map = L.mapquest.map('map', {
@@ -18,7 +29,11 @@ angular.module('tapapp').controller('UserController', function ($scope, $http, $
     $scope.geo = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
-            console.log('entrou na geolocalização')
+
         }
     }
+
+    $scope.modulos = fabricarModulo(true);
+    console.log($scope.modulos)
 });
+

@@ -35,41 +35,15 @@
 
     </div>
     <div id="test2" class="col s12 user-painel-info">
-        <div class="col s12">
+        <div class="col s12" ng-repeat="modules in modulos">
             <div class="card horizontal">
                 <div class="card-image">
-                    <i class="fas fa-volleyball-ball"></i>
+                    <i class="{{modules.icon}}"></i>
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                        <h4 class="header">Esporte </h4>
-                        <p>Solteiro, gato , amante por tecnologia e programação desde novinho e programador JS </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12">
-            <div class="card horizontal">
-                <div class="card-image">
-                    <i class="fas fa-stopwatch"></i>
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h4 class="header">Tempo </h4>
-                        <p>Solteiro, gato , amante por tecnologia e programação desde novinho e programador JS </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12">
-            <div class="card horizontal">
-                <div class="card-image">
-                    <i class="fas fa-heartbeat"></i>
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h4 class="header">Saude </h4>
-                        <p>Solteiro, gato , amante por tecnologia e programação desde novinho e programador JS </p>
+                        <h4 class="header">{{modules.nome}}</h4>
+                        <p>{{modules.description}}</p>
                     </div>
                 </div>
             </div>

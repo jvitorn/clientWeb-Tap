@@ -4,10 +4,10 @@ angular.module('tapapp').controller('IndexController', function ($scope, $http) 
     function fabricarModulo(parametro) {
         let objeto = {
             modulos: [
-                { nome: 'financa', status: parametro },
-                { nome: 'esporte', status: parametro },
-                { nome: 'saude', status: parametro },
-                { nome: 'tempo', status: parametro },
+                { nome: 'financa', status: parametro, description: 'Veja as ações da bolsa de valores, cotação das principais moedas do brasil e outros' },
+                { nome: 'noticias', status: parametro, description: 'confira as principais noticias do brasil em um click' },
+                { nome: 'tarefas', status: parametro, description: 'Veja as tarefas organizadas no seu dia a dia' },
+                { nome: 'tempo', status: parametro, description: 'Confira a previsão do tempo local' },
             ]
         }
 
@@ -39,10 +39,10 @@ angular.module('tapapp').controller('IndexController', function ($scope, $http) 
             body: 'Bem Vindo ao Tap, Esperamos muito de você!',
             icon: 'https://raw.githubusercontent.com/jvitorn/clientWeb-Tap/master/public/img/logo-1.png'
         };
-    // $scope.notification = Notification.requestPermission(function () {
-    //     new Notification(title, options);
+    $scope.notification = Notification.requestPermission(function () {
+        new Notification(title, options);
 
-    // });
+    });
 
 
     $scope.batery = navigator.getBattery();
