@@ -5,3 +5,27 @@
     </div>
 </div>
 <div class="divider"></div>
+<div class="row">
+    <div class="col s12 home-painel">
+        <h2><i class="far fa-newspaper"></i> Noticias</h2>
+        <p>Principais Noticias Do Brasil</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12" ng-repeat="noticias in news.articles |orderBy:ASC |limitTo:5">
+        <div class="card horizontal">
+            <div class="card-image">
+                <img src="{{noticias.urlToImage}}">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h4>{{noticias.title}}</h4>
+                    <p>{{noticias.description}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="{{noticias.url}}" class="text-center">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

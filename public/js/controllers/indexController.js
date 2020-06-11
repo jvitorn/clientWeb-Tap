@@ -1,4 +1,5 @@
 angular.module('tapapp').controller('IndexController', function ($scope, $http) {
+    const API_NEWS = '55aa6a3f763e41daa2e0655535306099';
 
     function fabricarModulo(parametro) {
         let objeto = {
@@ -38,14 +39,24 @@ angular.module('tapapp').controller('IndexController', function ($scope, $http) 
             body: 'Bem Vindo ao Tap, Esperamos muito de você!',
             icon: 'https://raw.githubusercontent.com/jvitorn/clientWeb-Tap/master/public/img/logo-1.png'
         };
-    $scope.notification = Notification.requestPermission(function () {
-        new Notification(title, options);
+    // $scope.notification = Notification.requestPermission(function () {
+    //     new Notification(title, options);
 
-    });
+    // });
 
 
     $scope.batery = navigator.getBattery();
     $scope.batery.then((battery) => {
         console.log('A porcentagem da bateria é de aproximadamente ' + battery.level * 100 + '%');
+        console.log("Battery charging? " + (battery.charging ? "Yes" : "No"))
     });
+
+
+
+    $http.get('http://newsapi.org/v2/top-headlines?country=br&category=business&apiKey=' + API_NEWS)
+        .then(results => {
+            $scope.news = results.data
+            console.log($scope.news)
+        }
+        )
 });
