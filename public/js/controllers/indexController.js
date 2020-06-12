@@ -1,12 +1,13 @@
-angular.module('tapapp').controller('IndexController', function ($scope, $http, $cookies) {
+angular.module('tapapp').controller('IndexController', function ($scope, $http, $cookies, recursoLogin) {
 
-    if (localStorage.getItem('x-acess-token')) {
+    recursoLogin.verify;
+
+    if ($cookies.get('x-acess-token')) {
         const API_NEWS = '55aa6a3f763e41daa2e0655535306099';
 
 
 
-        // Setting a cookie
-        $cookies.put('myFavorite', 'testandocookie');
+
 
         function fabricarModulo(parametro) {
             let objeto = {

@@ -1,4 +1,4 @@
-angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize', 'ngCookies'])
+angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize', 'meusServicos'])
     .config(function ($routeProvider, $locationProvider, $httpProvider) {
         // arrumando erro de cors
         $httpProvider.defaults.useXDomain = true;

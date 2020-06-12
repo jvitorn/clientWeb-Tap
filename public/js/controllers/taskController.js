@@ -1,4 +1,9 @@
-angular.module('tapapp').controller('TaskController', function ($scope, $http, $location) {
+angular.module('tapapp').controller('TaskController', function ($scope, $http, $location, recursoLogin) {
+
+
+    recursoLogin.verify;
+
+
 
     let tasks = []
     tasks = JSON.parse(localStorage.getItem('Tasks')) || [];

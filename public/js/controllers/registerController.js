@@ -1,5 +1,9 @@
-angular.module('tapapp').controller('RegisterController', function ($scope, $http, $location) {
-    console.log('entrou no controller register');
+angular.module('tapapp').controller('RegisterController', function ($scope, $http, $location, $rootScope, recursoLogin) {
+
+    recursoLogin.verify;
+
+    $rootScope.login = false;
+
     $scope.enviar = (usuario) => {
         console.log(usuario)
         $http.post('http://jdc.profrodolfo.com.br/backend/user', usuario)
