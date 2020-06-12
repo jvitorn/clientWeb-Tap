@@ -36,6 +36,6 @@ angular.module('tapapp').controller('UserController', function ($scope, $http, $
     }
 
     $scope.modulos = fabricarModulo(true);
-    console.log($scope.modulos)
+
 });
 

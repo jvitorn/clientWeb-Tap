@@ -1,4 +1,4 @@
-angular.module('tapapp').controller('IndexController', function ($scope, $http, $cookies, recursoLogin) {
+angular.module('tapapp').controller('IndexController', function ($scope, $http, $cookies, recursoLogin, $interval) {
 
     recursoLogin.verify;
 
@@ -51,8 +51,12 @@ angular.module('tapapp').controller('IndexController', function ($scope, $http, 
 
     $scope.batery = navigator.getBattery();
     $scope.batery.then((battery) => {
-        console.log('A porcentagem da bateria é de aproximadamente ' + battery.level * 100 + '%');
-        console.log("Battery charging? " + (battery.charging ? "Yes" : "No"))
+        $scope.bateryInfo = { porcentagem: battery.level * 100 + "%", charge: battery.charging ? true : false }
+        $interval(() => {
+            $scope.bateryInfo = { porcentagem: battery.level * 100 + "%", charge: battery.charging ? true : false }
+        }, 3000);
+
+
     });
 
 

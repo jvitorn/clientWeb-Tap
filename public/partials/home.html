@@ -7,6 +7,16 @@
 <div class="divider"></div>
 <div class="row">
     <div class="col s12 home-painel">
+        <h2><i class="fas fa-battery-full"></i>Bateria</h2>
+        <p>{{bateryInfo.porcentagem}}</p>
+        <p ng-if="!bateryInfo.charge" class="red-text darken-2">Aparelho não esta carregando</p>
+        <div class="progress">
+            <div class="determinate" style='width: {{bateryInfo.porcentagem}}'></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 home-painel">
         <h2><i class="far fa-newspaper"></i> Noticias</h2>
         <p>Principais Noticias Do Brasil</p>
     </div>

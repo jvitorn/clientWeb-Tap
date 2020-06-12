@@ -5,7 +5,7 @@ angular.module('tapapp').controller('FinanceController', function ($scope, $http
     $http.get('https://api.hgbrasil.com/finance?format=json-cors&key=163b38fc')
         .then(results => {
             $scope.finances = results.data
-            console.log($scope.finances)
+
 
             $scope.isCotation = (variation) => {
                 if (Math.sign(variation) == 1) {
