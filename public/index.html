@@ -30,9 +30,12 @@
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/angular-route.min.js"></script>
     <script src="js/lib/angular-resource.min.js"></script>
+    <!-- angularcookies -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-cookies.js"></script>
     <!-- materialize ui -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+
 
     <script src="js/geolocalization.js"></script>
     <!-- mask angular -->
@@ -58,7 +61,7 @@
 </head>
 
 <body>
-    <header>
+    <header ng-if="login">
         <div class="navbar-fixed">
             <nav class=" navbar grey darken-4">
                 <div class="nav-wrapper">

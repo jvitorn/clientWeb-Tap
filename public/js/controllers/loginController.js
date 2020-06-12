@@ -1,11 +1,21 @@
-angular.module('tapapp').controller('LoginController', function ($scope, $http) {
-    console.log('entrou no controller login');
+angular.module('tapapp').controller('LoginController', function ($scope, $http, $rootScope) {
+
+    $rootScope.login = false;
 
     $scope.enviar = (usuario) => {
         console.log(usuario)
         $http.post('http://jdc.profrodolfo.com.br/backend/auth/login', usuario)
             .then(results => {
-                console.log(results.data)
+                $scope.user = results.data
+                console.log($scope.user)
+                if ($scope.user.status == 'error') {
+                    Swal.fire($scope.user.msg)
+
+                    $scope.msg = $scope.user.msg
+                } else {
+                    localStorage.setItem('x-acess-token', $scope.user.token)
+                    window.location = '/home'
+                }
             })
             .catch(error => console.log(error))
     }

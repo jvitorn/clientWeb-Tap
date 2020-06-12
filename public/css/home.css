@@ -15,3 +15,6 @@
 .mt-5{
     margin-top: 4rem;
 }
+.Login-container .input-field.col.s12 .validate{
+    color:white;
+}

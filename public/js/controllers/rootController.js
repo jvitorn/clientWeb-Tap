@@ -4,4 +4,5 @@ angular.module('tapapp').run(function ($rootScope, $http, $document, $compile) {
 
 
     $rootScope.notfluid = true;
+    $rootScope.login = true;
 });
