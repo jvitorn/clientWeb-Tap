@@ -1,4 +1,6 @@
-angular.module('tapapp').controller('UserController', function ($scope, $http, $location) {
+angular.module('tapapp').controller('UserController', function ($scope, $http, $location, recursoLogin) {
+
+    recursoLogin.verify;
 
     function fabricarModulo(parametro) {
         let objeto = [

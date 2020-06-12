@@ -1,4 +1,7 @@
-angular.module('tapapp').controller('CalendarController', function ($scope, $http, $location, $filter) {
+angular.module('tapapp').controller('CalendarController', function ($scope, $http, $location, recursoLogin) {
+
+    recursoLogin.verify;
+
     const d = new Date()
 
     $scope.date = new Date()

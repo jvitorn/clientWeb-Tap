@@ -1,5 +1,4 @@
 angular.module('tapapp').controller('FogotCodeController', function ($scope, $http, $location) {
-    console.log('entrou no controller de fogot')
 
     $scope.enviar = (usuario) => {
         console.log(usuario)

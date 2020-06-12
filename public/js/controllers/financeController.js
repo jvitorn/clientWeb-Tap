@@ -1,4 +1,7 @@
-angular.module('tapapp').controller('FinanceController', function ($scope, $http, $location) {
+angular.module('tapapp').controller('FinanceController', function ($scope, $http, $location, recursoLogin) {
+
+    recursoLogin.verify;
+
     $http.get('https://api.hgbrasil.com/finance?format=json-cors&key=163b38fc')
         .then(results => {
             $scope.finances = results.data
