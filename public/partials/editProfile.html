@@ -7,7 +7,7 @@
             <form class="col s12 editProfile color">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" class="validate">
+                        <input type="text" ng-model="edit.name" class="validate">
                         <label for="Name">Nome</label>
                         <span class="helper-text" data-error="wrong" data-success="right">Caso queira atualizar seu
                             nome</span>
@@ -15,20 +15,32 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" class="validate">
+                        <input type="text" ng-model="edit.height" ui-mask="9,99" ui-mask-placeholder
+                            ui-mask-placeholder-char="_" class="validate">
                         <label for="height">Altura</label>
                         <span class="helper-text" data-error="wrong" data-success="right">Insira sua Altura</span>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" class="validate">
+                        <input type="text" ng-model="edit.weight" ui-mask="999,9" ui-mask-placeholder
+                            ui-mask-placeholder-char="_" class="validate">
                         <label for="weight">Peso</label>
                         <span class="helper-text" data-error="wrong" data-success="right">Seu Peso</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="date" class="validate">
+                        <input type="text" ng-model="edit.dt_birth" ui-mask="99/99/9999" ui-mask-placeholder
+                            class="validate">
                         <label for="dt_birth">Data de Nascimento</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <button class="waves-effect  btn-large red darken-4"> Cancelar </button>
+                    </div>
+                    <div class="col s6">
+                        <button class="waves-effect waves-light btn-large grey darken-4" ng-click="enviar(edit)"> Enviar
+                        </button>
                     </div>
                 </div>
             </form>

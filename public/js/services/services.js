@@ -24,9 +24,17 @@ angular.module('meusServicos', ['ngResource', 'ngCookies'])
                 console.log('essa rota nao vai aplicar o cookie')
             }
         }
+        function token() {
+            if ($cookies.get('x-acess-token')) {
+                const refaturandoToken = $cookies.get('x-acess-token')
+
+                return refaturandoToken
+            }
+        }
 
         return {
-            verify: verify()
+            verify: verify(),
+            token: token()
         }
 
     })
