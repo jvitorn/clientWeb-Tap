@@ -64,6 +64,12 @@ angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize', 'meusServicos'
             //controller da pagina 
             controller: 'FinanceController'
         });
+        $routeProvider.when('/editProfile', {
+            //pagina que sera carregada
+            templateUrl: 'partials/editProfile.html',
+            //controller da pagina 
+            controller: 'EditProfileController'
+        });
         //obrigando o usuario a ser redirecionado para '/'
         $routeProvider.otherwise({ redirectTo: '/home' });
     });
