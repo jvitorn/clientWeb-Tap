@@ -8,19 +8,15 @@ angular.module('tapapp').controller('EditProfileController', function ($scope, r
     $scope.enviar = (edit) => {
         const userEdit = edit;
         //arrumar data
-        const date = new Date(userEdit.dt_birth)
+        const data = userEdit.dt_birth;
+        const dia = data.substr(0, 2);
+        const mes = data.substr(2, 2);
+        const ano = data.substr(4, 4);
+        const dataFormatada = ano + "-" + mes + "-" + dia;
+        userEdit.dt_birth = dataFormatada;
 
-        const dd = date.getDate();
-        const mm = date.getMonth() + 1;
-        const yy = date.getFullYear();
-        console.log(userEdit)
-
-
-
-        //userEdit.dt_birth = yy + '-' + mm + "-" + dd;
-        userEdit.dt_birth = 3
         //arrumar altura
-        const altura = toString(userEdit.height);
+        const altura = userEdit.height
         const result = altura.substr(0, 1) + ',' + altura.substr(1, 2);
 
         userEdit.height = result
@@ -29,10 +25,14 @@ angular.module('tapapp').controller('EditProfileController', function ($scope, r
 
         const peso = userEdit.weight
         if (peso.substr(0, 1) == 0) {
-            const weight = peso.substr(1, 2) + ',' + peso.substr(3, 1);
-            userEdit.weight = weight;
+            const weight0 = peso.substr(1, 2) + ',' + peso.substr(3, 1);
+            userEdit.weight = weight0;
+        } else {
+            const weigt1 = peso.substr(0, 2) + ',' + peso.substr(3, 1);
+            userEdit.weight = weigt1;
         }
 
+        console.log(userEdit)
 
         // $http.put('http://jdc.profrodolfo.com.br/backend/user', {
         //     headers: { 'Authorization': 'Bearer ' + recursoLogin.token }
