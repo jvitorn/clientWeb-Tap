@@ -1,6 +1,4 @@
-angular.module('tapapp').controller('LoginController', function ($scope, $http, $rootScope, $cookies, recursoLogin) {
-
-    recursoLogin.verify;
+angular.module('tapapp').controller('LoginController', function ($scope, $http, $rootScope) {
 
     $rootScope.login = false;
 
@@ -15,9 +13,7 @@ angular.module('tapapp').controller('LoginController', function ($scope, $http, 
 
                     $scope.msg = $scope.user.msg
                 } else {
-                    // Setting a cookie
-                    $cookies.put('x-acess-token', $scope.user.token);
-
+                    localStorage.setItem('x-acess-token', $scope.user.token)
                     window.location = '/home'
                 }
             })

@@ -40,11 +40,4 @@ angular.module('tapapp').controller('EditProfileController', function ($scope, r
 
     }
 
-}).config(function ($httpProvider) {
-    $httpProvider.defaults.useXDomain = true;
-    $httpProvider.defaults.headers.common["Accept"] = "application/json";
-    $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
-    $httpProvider.defaults.headers.common["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, DELETE";
-    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-
 });

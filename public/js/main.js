@@ -1,5 +1,5 @@
 angular.module('tapapp', ['ngRoute', 'ui.materialize', 'meusServicos', 'ui.mask'])
-    .config(function ($routeProvider, $locationProvider) {
+    .config(function ($routeProvider, $locationProvider, $httpProvider) {
 
         //habilidando modo de html
         $locationProvider.html5Mode(true);
