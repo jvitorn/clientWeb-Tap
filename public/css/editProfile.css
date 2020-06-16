@@ -1,0 +1,9 @@
+.editProfile.color .validate{
+    color:white;
+}
+.editProfile.color .helper-text,.editProfile.color label{
+    color:white;
+}
+.editProfile.color input[type=text],.editProfile.color input[type=date]{
+    border-bottom:1px solid white;
+}

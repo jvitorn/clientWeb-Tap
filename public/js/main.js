@@ -1,10 +1,5 @@
-angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize', 'meusServicos'])
-    .config(function ($routeProvider, $locationProvider, $httpProvider) {
-        // arrumando erro de cors
-        $httpProvider.defaults.useXDomain = true;
-        $httpProvider.defaults.headers.common["Accept"] = "application/json";
-        $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
-        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+angular.module('tapapp', ['ngRoute', 'ui.materialize', 'meusServicos', 'ui.mask'])
+    .config(function ($routeProvider, $locationProvider) {
 
         //habilidando modo de html
         $locationProvider.html5Mode(true);
@@ -63,6 +58,12 @@ angular.module('tapapp', ['ngRoute', 'ui.mask', 'ui.materialize', 'meusServicos'
             templateUrl: 'partials/finance.html',
             //controller da pagina 
             controller: 'FinanceController'
+        });
+        $routeProvider.when('/editProfile', {
+            //pagina que sera carregada
+            templateUrl: 'partials/editProfile.html',
+            //controller da pagina 
+            controller: 'EditProfileController'
         });
         //obrigando o usuario a ser redirecionado para '/'
         $routeProvider.otherwise({ redirectTo: '/home' });
