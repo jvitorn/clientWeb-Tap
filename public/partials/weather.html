@@ -7,10 +7,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s6">
+            <div class="col s12 m6 l6">
                 <i class="fas fa-cloud-sun"></i>
             </div>
-            <div class="col s6 text-left">
+            <div class="col s12 m6 l6 text-left">
                 <h4>{{tempo.results.city_name}}</h4>
                 <h3 class="">{{tempo.results.description}}</h3>
                 <h6>Umidade atual : {{tempo.results.humidity}}%</h6>
@@ -21,13 +21,13 @@
 </div>
 <div class="divider"></div>
 <div class="row">
-    <div class="col s12">
+    <div class="col s12 l12 m12">
         <h5 class="text-center">Previsão do Tempo para os proximos dias:</h5>
     </div>
 </div>
 <div class="divider"></div>
 <div class="row weather-info">
-    <div class="col s3 " ng-repeat="previcoes in tempo.results.forecast">
+    <div class="col s6 m4 l4" ng-repeat="previcoes in tempo.results.forecast">
         <p class="text-right">{{previcoes.min}}º</p>
         <i class="fas fa-cloud"></i>
         <p class="">{{previcoes.weekday}} <br> {{previcoes.date}}</p>

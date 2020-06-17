@@ -1,4 +1,6 @@
-angular.module('tapapp').controller('LoginController', function ($scope, $http, $rootScope) {
+angular.module('tapapp').controller('LoginController', function ($scope, $http, $rootScope, $location, $cookies, recursoLogin) {
+
+    recursoLogin.verify;
 
     $rootScope.login = false;
 
@@ -13,8 +15,10 @@ angular.module('tapapp').controller('LoginController', function ($scope, $http, 
 
                     $scope.msg = $scope.user.msg
                 } else {
-                    localStorage.setItem('x-acess-token', $scope.user.token)
-                    window.location = '/home'
+                    recursoLogin.token
+                    $cookies.put('x-acess-token', $scope.user.token)
+                    $location.path('home')
+
                 }
             })
             .catch(error => console.log(error))
@@ -23,6 +27,6 @@ angular.module('tapapp').controller('LoginController', function ($scope, $http, 
     $httpProvider.defaults.useXDomain = true;
     $httpProvider.defaults.headers.common["Accept"] = "application/json";
     $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
-    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 });

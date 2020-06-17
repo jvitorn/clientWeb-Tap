@@ -28,16 +28,20 @@ angular.module('tapapp').controller('EditProfileController', function ($scope, r
             const weight0 = peso.substr(1, 2) + ',' + peso.substr(3, 1);
             userEdit.weight = weight0;
         } else {
-            const weigt1 = peso.substr(0, 2) + ',' + peso.substr(3, 1);
+            const weigt1 = peso.substr(0, 3) + ',' + peso.substr(3, 1);
             userEdit.weight = weigt1;
         }
 
-        console.log(userEdit)
-
-        // $http.put('http://jdc.profrodolfo.com.br/backend/user', {
-        //     headers: { 'Authorization': 'Bearer ' + recursoLogin.token }
-        // }, userEdit)
 
     }
 
+    const editProfile = {
+        dt_birth: "2000-05-30",
+        height: "1,85",
+        name: "joao vitor",
+        weight: "105,5"
+    }
+    console.log(editProfile)
+    $http.put('http://jdc.profrodolfo.com.br/backend/user', editProfile)
+        .then(results => console.log(results))
 });

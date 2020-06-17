@@ -9,15 +9,26 @@
 <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript">
-        somejson = {
-            email: 'jdc_santos@outlook.com',
-            password: '123456'
-        };
+        const somejson = {
+            dt_birth: "2000-05-30",
+            height: "1,85",
+            name: "joao vitor",
+            weight: "105,5"
+        }
+            ;
         console.log(somejson)
         $.ajax({
-            url: "http://jdc.profrodolfo.com.br/backend/auth/login",
-            type: "POST",
+            url: "http://jdc.profrodolfo.com.br/backend/user",
+            type: "PUT",
             data: somejson,
+            headers: {
+                'Access-Control-Allow-Headers':
+                    "Content-Type,X-Amz-Date,Authorization,X-Api-Key",
+                'Access-Control-Allow-Methods':
+                    "*",
+                'Access-Control-Allow-Origin':
+                    "*"
+            },
             success: function (res) {
                 console.log(res);
             },
@@ -26,8 +37,8 @@
             }
         });
         console.log($.ajax({
-            url: "http://jdc.profrodolfo.com.br/backend/auth/login",
-            type: "POST",
+            url: "http://jdc.profrodolfo.com.br/backend/user",
+            type: "PUT",
             data: somejson,
             success: function (res) {
                 console.log(res);

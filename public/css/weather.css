@@ -2,7 +2,7 @@
     margin-top: 3rem;
     text-align: center;
 }
-.col.s6 .fa-cloud-sun{
+.col.s12 .fa-cloud-sun{
     font-size: 200px;
     color:lightseagreen;
     
@@ -19,5 +19,4 @@
 }
 .row.weather-info{
     margin-top: 2rem;
-    padding: 3rem;
 }

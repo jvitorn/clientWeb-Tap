@@ -26,7 +26,8 @@ angular.module('meusServicos', ['ngResource', 'ngCookies'])
         }
         function token() {
             if ($cookies.get('x-acess-token')) {
-                const refaturandoToken = $cookies.get('x-acess-token')
+                const refaturandoToken = $cookies.get('x-acess-token');
+                // Setting a cookie
 
                 return refaturandoToken
             }
