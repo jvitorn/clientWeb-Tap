@@ -37,14 +37,14 @@
         <h4>Nova Tarefa</h4>
 
         <div class="row">
-            <div class="input-field col s6 task-create">
+            <div class="input-field col s12 task-create">
                 <input type="text" class="validate" ng-model="task.name">
                 <label> Nome da tarefa</label>
                 <p>Adicione um titulo para essa tarefa</p>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s12">
                 <textarea id="textarea1" class="materialize-textarea" ng-model="task.description"></textarea>
                 <label for="textarea1">Descriçaõ da tarefa</label>
                 <p>Adicione uma descrição para essa tarefa</p>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s12">
                 <button class="waves-effect waves-light btn-large" ng-click="criarTarefa(task)">Criar Tarefa</button>
             </div>
         </div>

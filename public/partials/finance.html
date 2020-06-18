@@ -39,7 +39,7 @@
         </div>
 
         <div class="row">
-            <div class="col s6 cotate-info" ng-repeat=" cotations in finances.results.currencies">
+            <div class="col s6 m6 l6 cotate-info" ng-repeat=" cotations in finances.results.currencies">
 
                 <span class="name-cotation">
                     <span ng-class="{'badge-cotations blue':isCotation(cotations.variation),
@@ -60,7 +60,7 @@
 
         </div>
         <div class="row">
-            <div class="col s3" ng-repeat=" bolsas in finances.results.stocks">
+            <div class="col s6 m3 l3" ng-repeat=" bolsas in finances.results.stocks">
 
                 <span class="name-cotation">
                     <span class="variation" ng-class="{'badge-cotations color-green':isCotation(bolsas.variation),
